@@ -1,0 +1,57 @@
+
+.shantHeader
+{
+  background-color:#431e59;
+}
+.mainbutton:hover{
+  color:#ffffff;
+}
+.ion-navicon{
+  color:#ffffff;
+}
+.shantLogo{
+  display: inline-block;
+  height: 37%;
+}
+.pageTitle{
+  font:"Segoe UI Light";
+  color:#ffffff;
+  margin:left:5%;
+  float:left;
+}
+.title.title-right.header-item{
+  margin-right:2%;
+  margin-left:0px;
+}
+.programms.item{
+  border-style:none;
+}
+.programms a{
+  text-decoration: none;
+}
+.programms.a:hover {
+  background-color:#e3dfe5;
+}
+p.userName.ng-binding{
+  padding: 16px;
+  margin:0 0
+}
+ion-list div.list{
+  padding:0px;
+}
+.search{
+  padding: 1em;
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+.menu.menu-left{
+  background-color:#ffffff;
+}
+.right{
+  float:right;
+}
+.left{
+  float:left;
+}
