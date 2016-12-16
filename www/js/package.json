@@ -1,0 +1,33 @@
+{
+  "User": "Lil' Abrahamyan",
+  "Categories":[
+    {
+      "Title": "Tv Series",
+      "Activated": "+"
+    },
+    {
+      "Title": "Shows",
+      "Activated": "+"
+    },
+    {
+      "Title": "Social Politacal",
+      "Activated": "+"
+    },
+    {
+      "Title": "Humor",
+      "Activated": " "
+    },
+    {
+      "Title": "Cognitive",
+      "Activated": "+"
+    },
+    {
+      "Title": "Entertaining",
+      "Activated": "+"
+    },
+    {
+      "Title": "Archive",
+      "Activated": " "
+    }
+  ]
+}

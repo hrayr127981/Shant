@@ -4,10 +4,14 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 var shantApp=angular.module('starter', ['ionic']);
-shantApp.controller('shantCtrl', ['$scope','$ionicSideMenuDelegate','$stateParams', function($scope,$ionicSideMenuDelegate,$stateParams) {
-  $scope.toggleLeftSideMenu = function() {
-    $ionicSideMenuDelegate.toggleLeft();
-  };
+shantApp.controller('shantCtrl', ['$scope','$ionicSideMenuDelegate','$stateParams','$http', function($scope,$ionicSideMenuDelegate,$stateParams,$http) {
+
+  $http.get("js/package.json")
+    .then(function(response) {
+      $scope.user =response.data.User;
+      $scope.categories = response.data.Categories;
+      console.log($scope.categories);
+    });
   $scope.shows = [
     {
       'title':'TvSerials',
@@ -46,7 +50,7 @@ shantApp.controller('shantCtrl', ['$scope','$ionicSideMenuDelegate','$stateParam
       'title' : 'About Shant'
     }
   ];
-  $scope.user = "Janul Abrahamyan";
+
 }]);
 
 shantApp.run(function($ionicPlatform) {

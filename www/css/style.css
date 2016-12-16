@@ -39,9 +39,6 @@ p.userName.ng-binding{
 ion-list div.list{
   padding:0px;
 }
-.search{
-  padding: 1em;
-}
 a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
@@ -55,3 +52,34 @@ a {
 .left{
   float:left;
 }
+.shantcontent{
+background-color:#51266a;
+}
+.shantFooter{
+  background-color:#5e3676
+}
+.bar-footer{
+  background-position: -9999px -9999px
+}
+.search{
+  padding-left: 1em;
+  border: 0px solid;
+  font-weight: bold;
+  font-family:"Segoe UI Light";
+}
+.color{
+  color:#76319c
+}
+
+.search::-webkit-input-placeholder {color:#76319c;}
+.search::-moz-placeholder          {color:#76319c;}
+.search:-moz-placeholder           {color:#76319c;}
+.search:-ms-input-placeholder      {color:#76319c;}
+.ion-ios-search{
+margin-right: 1em;
+}
+.footershant
+{
+color:#b8aebb;
+}
+
