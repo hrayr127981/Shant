@@ -1,13 +1,37 @@
 
 <ion-view>
-  <ion-nav-title class = "mainTitle" view-title="Main">
+  <ion-nav-title class = "mainTitle">
     <span class="pageTitle" >Main</span>
-    <img src = "img/Logo.png" class="shantLogo"/>
+    <img ng-src = "img/Logo.png" class="shantLogo"/>
   </ion-nav-title>
   <ion-content class = "has-footer shantcontent">
+    <ion-scroll direction="x" scroll-outside="true">
 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen id ="MainVideo"></iframe>
+      <div id="all_videos">
+        <p>Trending </p>
+        <iframe width="280" height="155" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
+        <iframe width="280" height="155" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
+        <iframe width="280" height="155" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
+        <iframe width="280" height="155" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
+        <p>most popular </p>
+        <iframe width="280" height="155" src="https://www.youtube.com/embed/Bs9DHnzunVA" frameborder="0" allowfullscreen></iframe>
+        <iframe width="280" height="155" src="https://www.youtube.com/embed/Bs9DHnzunVA" frameborder="0" allowfullscreen></iframe>
+        <iframe width="280" height="155" src="https://www.youtube.com/embed/Bs9DHnzunVA" frameborder="0" allowfullscreen></iframe>
+        <iframe width="280" height="155" src="https://www.youtube.com/embed/Bs9DHnzunVA" frameborder="0" allowfullscreen></iframe>
+      </div>
+      </ion-scroll>
   </ion-content>
   <ion-footer-bar  class="shantFooter">
-
+    <ion-scroll zooming="true" overflow-scroll="true" id="buttonsId">
+    <div class="button-bar">
+      <a class="button">Entartainment</a>
+      <a class="button">Tv Series</a>
+      <a class="button">News</a>
+      <a class="button">Programs</a>
+      <a class="button">Shows</a>
+      <a class="button">Cognitive</a>
+    </div>
+      </ion-scroll>
   </ion-footer-bar>
 </ion-view>

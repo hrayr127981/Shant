@@ -1,4 +1,32 @@
+@font-face{
+  font-family: "segoe";
+  src:url("../fonts/ufonts.com_segoe-ui-light.ttf");
+}
+body{
+  font-family:"segoe";
+}
+.bar{
+  background-size: 100% 0px;
+  height: 8vh;
+}
+#MainVideo{
+  margin: 0 auto;
+  margin-top: 5vh;
+  display: block;
+}
+.nav-bar-block .title-right{
+  margin-top: 2vh
+}
 
+ion-scroll[direction=y] {
+  height: 100vh;
+}
+#buttonsId{
+  width:100%;
+}
+.bar .title{
+  height:80px;
+}
 .shantHeader
 {
   background-color:#431e59;
@@ -11,13 +39,16 @@
 }
 .shantLogo{
   display: inline-block;
-  height: 37%;
+  width: 12%;
+  margin-top: 1vh;
+  float: right;
 }
 .pageTitle{
-  font:"Segoe UI Light";
   color:#ffffff;
-  margin:left:5%;
+  line-height: 4vh;
+  margin-left:5%;
   float:left;
+  font-size:2vh;
 }
 .title.title-right.header-item{
   margin-right:2%;
@@ -81,6 +112,6 @@ margin-right: 1em;
 }
 .footershant
 {
-color:#b8aebb;
+  color:#b8aebb;
 }
 
