@@ -3,35 +3,41 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var shantApp=angular.module('starter', ['ionic']);
-shantApp.controller('shantCtrl', ['$scope','$ionicSideMenuDelegate','$stateParams','$http', function($scope,$ionicSideMenuDelegate,$stateParams,$http) {
-$scope.MustShow = false;
-$scope.showhidden = function(id){
-  $scope.MustShow = !$scope.MustShow;
-};
+var shantApp = angular.module('starter', ['ionic']);
+shantApp.controller('shantCtrl', ['$scope', '$ionicSideMenuDelegate', '$stateParams', '$http', function ($scope, $ionicSideMenuDelegate, $stateParams, $http) {
+  $scope.expandedCategories = [];
+  $scope.toggleMenu = function (id) {
+    if($scope.expandedCategories[id]){
+      $scope.expandedCategories[id] = !$scope.expandedCategories[id];
+    }else{
+      $scope.expandedCategories[id] = true;
+    }
+    console.log($scope.expandedCategories);
+  };
   $http.get("js/package.json")
-    .then(function(response) {
-      $scope.user =response.data.User;
+    .then(function (response) {
+      console.log(response);
+      $scope.user = response.data.User;
       $scope.categories = response.data.Categories;
     });
 
   $scope.footerMenus = [
     {
-      'title' : 'Help'
+      'title': 'Help'
     },
     {
-      'title' : 'Terms & Conditions'
+      'title': 'Terms & Conditions'
     },
     {
-      'title' : 'About Shant'
+      'title': 'About Shant'
     }
   ];
 
 }]);
 
-shantApp.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
+shantApp.run(function ($ionicPlatform) {
+  $ionicPlatform.ready(function () {
+    if (window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -41,7 +47,7 @@ shantApp.run(function($ionicPlatform) {
       // a much nicer keyboard experience.
       cordova.plugins.Keyboard.disableScroll(true);
     }
-    if(window.StatusBar) {
+    if (window.StatusBar) {
       StatusBar.styleDefault();
     }
   });
