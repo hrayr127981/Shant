@@ -1,9 +1,9 @@
 @font-face{
-  font-family: "segoe";
+  font-family:"segoe";
   src:url("../fonts/ufonts.com_segoe-ui-light.ttf");
 }
 body{
-  font-family:"segoe";
+  font-family:"segoe" !important;
 }
 .bar{
   background-size: 100% 0px;
@@ -64,8 +64,8 @@ ion-scroll[direction=y] {
   background-color:#e3dfe5;
 }
 p.userName.ng-binding{
-  padding: 16px;
-  margin:0 0
+  font-family:"segoe";
+  padding: 2.2vh;
 }
 ion-list div.list{
   padding:0px;
@@ -93,16 +93,14 @@ background-color:#51266a;
   background-position: -9999px -9999px
 }
 .search{
-  padding-left: 1em;
+  padding-left: 2.2vh;
   border: 0px solid;
-  font-weight: bold;
   font-family:"Segoe UI Light";
 }
 .color{
   color:#76319c;
-  font-size: 1em !important;
+  font-size: 3vh !important;
 }
-
 .search::-webkit-input-placeholder {color:#76319c;}
 .search::-moz-placeholder          {color:#76319c;}
 .search:-moz-placeholder           {color:#76319c;}

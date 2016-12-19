@@ -5,39 +5,15 @@
 // the 2nd parameter is an array of 'requires'
 var shantApp=angular.module('starter', ['ionic']);
 shantApp.controller('shantCtrl', ['$scope','$ionicSideMenuDelegate','$stateParams','$http', function($scope,$ionicSideMenuDelegate,$stateParams,$http) {
-
+$scope.MustShow = false;
+$scope.showhidden = function(id){
+  $scope.MustShow = !$scope.MustShow;
+};
   $http.get("js/package.json")
     .then(function(response) {
       $scope.user =response.data.User;
       $scope.categories = response.data.Categories;
-      console.log($scope.categories);
     });
-  $scope.shows = [
-    {
-      'title':'TvSerials',
-      'activated':'+'
-    },
-    {
-      'title':'Tvshows',
-      'activated':'+'
-    },
-    {
-      'title':'Tvshows',
-      'activated':'+'
-    },
-    {
-      'title':'Tvshows',
-      'activated':'+'
-    },
-    {
-      'title':'Tvshows',
-      'activated':''
-    },
-    {
-      'title':'Tvshows',
-      'activated':'+'
-    }
-  ];
 
   $scope.footerMenus = [
     {

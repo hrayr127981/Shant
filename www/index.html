@@ -47,9 +47,13 @@
 
       <ion-list ng-repeat="show in categories">
         <ion-item class = "programms color">
-          <a href = "#"><span class = "color">{{show.Title}}</span>
-            <span class = "right">{{show.Activated}}</span>
-          </a>
+          <span class = "color"   ng-click = "showhidden($index)">{{show.Title}}</span>
+            <span class = "right" ng-click = "showhidden($index)">{{show.Activated}}</span>
+            <ion-list ng-repeat="showUndercat in show.undercategories" >
+              <ion-item ng-show = "MustShow">
+               {{showUndercat.title}}
+              </ion-item>
+            </ion-list>
         </ion-item>
       </ion-list>
       <hr>
