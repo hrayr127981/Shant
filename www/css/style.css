@@ -9,13 +9,32 @@ body{
   background-size: 100% 0px;
   height: 8vh;
 }
-#MainVideo{
-  margin: 0 auto;
-  margin-top: 5vh;
-  display: block;
-}
+
 .nav-bar-block .title-right{
   margin-top: 2vh
+}
+#underCategory{
+  margin-top: 2%;
+  color:#431e59;
+  border-style:none
+}
+#vidsGal{
+  display: inline-block;
+  width: 67%
+}
+#MainVideo{
+  margin-left:5vh;
+  margin-top: 5vh;
+  display: inline-block;
+}
+
+#buttonCenter {
+  font-family:"segoe";
+  background:#743199;
+  top: 50%;
+  width:50%;
+  color:white;
+  margin-left: 10vh
 }
 
 ion-scroll[direction=y] {
@@ -40,7 +59,7 @@ ion-scroll[direction=y] {
 .shantLogo{
   display: inline-block;
   width: 12%;
-  margin-top: 1vh;
+  margin-top: 0vh;
   float: right;
 }
 .pageTitle{
@@ -66,6 +85,9 @@ ion-scroll[direction=y] {
 p.userName.ng-binding{
   font-family:"segoe";
   padding: 2.2vh;
+}
+.programms.item{
+  line-height:2.5vh;
 }
 ion-list div.list{
   padding:0px;

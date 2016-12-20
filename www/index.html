@@ -51,7 +51,7 @@
             <span class = "right" ng-click = "toggleMenu($index)">{{show.Activated}}</span>
            <div ng-if = "expandedCategories[$index] === true">
             <ion-list ng-repeat="showUndercat in show.undercategories"  >
-              <ion-item>
+              <ion-item id = "underCategory">
                {{showUndercat.title}}
               </ion-item>
             </ion-list>
@@ -61,9 +61,15 @@
       <hr>
       <ion-list ng-repeat="footerItem in footerMenus">
         <ion-item class = "programms footershant">
-          <a href = "#">{{footerItem.title}}
+          <a href = "#">
+            {{footerItem.Title}}
           </a>
         </ion-item>
+      </ion-list>
+      <hr>
+      <button class="button" id = "buttonCenter">
+        Sign  Out
+      </button>
       </ion-side-menu>
   </ion-side-menus>
   </body>

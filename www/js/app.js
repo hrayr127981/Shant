@@ -16,7 +16,8 @@ shantApp.controller('shantCtrl', ['$scope', '$ionicSideMenuDelegate', '$statePar
   };
   $http.get("js/package.json")
     .then(function (response) {
-      console.log(response);
+      $scope.footerMenus = response.data.footer;
+      console.log($scope.footerMenus);
       $scope.user = response.data.User;
       $scope.categories = response.data.Categories;
     });
