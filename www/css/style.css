@@ -20,12 +20,23 @@ body{
 }
 #vidsGal{
   display: inline-block;
-  width: 67%
+  float:right;
+  width: 60%;
+  margin-top: 10%;
 }
+
 #MainVideo{
-  margin-left:5vh;
-  margin-top: 5vh;
-  display: inline-block;
+  margin-left:3%;
+  margin-top:10%;
+  width:36%;
+  height:55%;
+}
+.shantcontent{
+  width:100%;
+}
+#allVidsDiv{
+  height: 100%;
+  width:100%;
 }
 
 #buttonCenter {
@@ -44,7 +55,7 @@ ion-scroll[direction=y] {
   width:100%;
 }
 .bar .title{
-  height:80px;
+  height:8vh;
 }
 .shantHeader
 {
@@ -122,6 +133,11 @@ background-color:#51266a;
 .color{
   color:#76319c;
   font-size: 3vh !important;
+}
+.overFlow{
+  overflow-x:scroll;
+  overflow-y:hidden;
+  white-space: nowrap;
 }
 .search::-webkit-input-placeholder {color:#76319c;}
 .search::-moz-placeholder          {color:#76319c;}
