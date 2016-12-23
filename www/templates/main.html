@@ -6,19 +6,14 @@
   </ion-nav-title>
   <ion-content class = "has-footer shantcontent">
   <div id ="allVidsDiv">
-    <iframe width="702"  src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen id ="MainVideo"></iframe>
+    <iframe width="702" height="650" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen id ="MainVideo"></iframe>
       <div id="vidsGal">
-        <div class="overFlow">
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
-          <iframe width="345" height="260" src="https://www.youtube.com/embed/CbW4FxVPJqA" frameborder="0" allowfullscreen></iframe>
+        <div class="overFlow" >
+          <ion-list>
+            <ion-item class="inline-item" ng-repeat="heal in health">
+              <img ng-src = "{{heal.thumbnails.high.url}}">
+            </ion-item>
+          </ion-list>
         </div>
         <br>
         <div class="overFlow">
@@ -30,6 +25,11 @@
           <iframe width="345" height="260" src="https://www.youtube.com/embed/Bs9DHnzunVA" frameborder="0" allowfullscreen></iframe>
           <iframe width="345" height="260" src="https://www.youtube.com/embed/Bs9DHnzunVA" frameborder="0" allowfullscreen></iframe>
           <iframe width="345" height="260" src="https://www.youtube.com/embed/Bs9DHnzunVA" frameborder="0" allowfullscreen></iframe>
+          <iframe width="345" height="260" src="https://www.youtube.com/embed/Bs9DHnzunVA" frameborder="0" allowfullscreen></iframe>
+          <iframe width="345" height="260" src="https://www.youtube.com/embed/Bs9DHnzunVA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="overFlow" ng-repeat ="heal in health">
+
         </div>
       </div>
   </div>

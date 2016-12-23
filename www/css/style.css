@@ -144,10 +144,14 @@ background-color:#51266a;
 .search:-moz-placeholder           {color:#76319c;}
 .search:-ms-input-placeholder      {color:#76319c;}
 .ion-ios-search{
-margin-right: 1em;
+  margin-right: 1em;
 }
 .footershant
 {
   color:#b8aebb;
 }
-
+.inline-item{
+  background: #51266a;
+  border: none;
+  display: inline-block;
+}

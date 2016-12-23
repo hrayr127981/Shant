@@ -4,7 +4,15 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 var shantApp = angular.module('starter', ['ionic']);
-shantApp.controller('shantCtrl', ['$scope', '$ionicSideMenuDelegate', '$stateParams', '$http', function ($scope, $ionicSideMenuDelegate, $stateParams, $http) {
+shantApp.controller('shantCtrl', ['$scope', '$ionicSideMenuDelegate', '$stateParams', '$http','youtubeApi', function ($scope, $ionicSideMenuDelegate, $stateParams, $http, youtubeApi) {
+  $scope.health = [];
+
+  youtubeApi.getPlaylistItem(youtubeApi.health).then(function(response) {
+    angular.forEach(response.data.items, function (child) {
+      $scope.health.push(child.snippet);
+      console.log($scope.health);
+    })
+  });
   $scope.expandedCategories = [];
   $scope.toggleMenu = function (id) {
     if($scope.expandedCategories[id]){
@@ -12,28 +20,13 @@ shantApp.controller('shantCtrl', ['$scope', '$ionicSideMenuDelegate', '$statePar
     }else{
       $scope.expandedCategories[id] = true;
     }
-    console.log($scope.expandedCategories);
   };
   $http.get("js/data.json")
     .then(function (response) {
       $scope.footerMenus = response.data.footer;
-      console.log($scope.footerMenus);
       $scope.user = response.data.User;
       $scope.categories = response.data.Categories;
     });
-
-  $scope.footerMenus = [
-    {
-      'title': 'Help'
-    },
-    {
-      'title': 'Terms & Conditions'
-    },
-    {
-      'title': 'About Shant'
-    }
-  ];
-
 }]);
 
 shantApp.run(function ($ionicPlatform) {
